@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "_expo_tmp",
-    "slug": "_expo_tmp",
+    "name": "IVPDS",
+    "slug": "ivpds-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,6 +10,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.ivpds.mobile",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +21,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-secure-store",
+      "expo-audio",
+      "@react-native-community/datetimepicker",
+      "expo-notifications",
+      "expo-font",
+      "expo-asset"
+    ]
   }
 }
